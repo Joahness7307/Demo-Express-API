@@ -3,7 +3,8 @@ const {
   registerUser,
   loginUser,
   addUser,
-  updateUser
+  updateUser,
+  deleteUser,
 } = require("../controllers/userController");
 
 const router = express.Router();
@@ -21,5 +22,6 @@ router.post("/add", addUser);
 router.put("/update/:id", updateUser);
 
 // Delete user routes here
+router.delete("/delete/:id", deleteUser);
 
 module.exports = router;
